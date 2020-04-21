@@ -20,7 +20,17 @@ function check(letter)
 module.exports = function(letter)
 {
 	this.letter = letter;
-	this.guessed = false;
+	switch (letter) {
+	case ' ':
+	case '-':
+	case '.':
+	case '&':
+		this.guessed = true;
+		break;
+
+	default:
+		this.guessed = false;
+	}
 	this.display = display;
 	this.check = check;
 }

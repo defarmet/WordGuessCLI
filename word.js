@@ -45,6 +45,7 @@ function solved()
 
 module.exports = function(word)
 {
+	this.word = word;
 	this.letters = create(word);
 	this.display = display;
 	this.check = check;
